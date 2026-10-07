@@ -1,0 +1,43 @@
+/* CyberForge — responsive layout */
+@media (max-width: 1100px) {
+  .header-xp { display: none; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 960px) {
+  .menu-toggle { display: block; }
+  .nav {
+    display: none; position: absolute; top: 64px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 2px;
+    background: #0a0e12; border-bottom: 1px solid var(--border); padding: 12px 16px 18px; max-height: calc(100vh - 64px); overflow-y: auto; margin: 0;
+  }
+  .nav.open { display: flex; }
+  .nav a, .nav summary { padding: 12px 14px; font-size: 1rem; }
+  .menu-panel { position: static; box-shadow: none; border: 0; background: transparent; padding: 0 0 0 12px; min-width: 0; }
+  .hero-grid, .split { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .admin-layout { grid-template-columns: 1fr; }
+  .side-nav { position: static; grid-auto-flow: column; overflow-x: auto; grid-auto-columns: max-content; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .container { padding: 0 16px; }
+  .section { padding: 40px 0; }
+  .hero { padding: 40px 0 24px; }
+  .grid-2, .grid-3, .grid-4, .form-grid, .footer-grid { grid-template-columns: 1fr; }
+  .btn-row .btn { flex: 1 1 100%; }
+  .path { padding-left: 26px; }
+  .level::before { left: -23px; }
+  .path::before { left: 5px; }
+  .lesson > summary { padding: 14px; gap: 10px; }
+  .lesson-body { padding: 16px; }
+  .lesson .state { display: none; }
+  .mentor-fab { left: 12px; bottom: 12px; padding: 10px 14px; }
+  .mentor-panel { left: 10px; right: 10px; width: auto; bottom: 64px; }
+  .toast-wrap { right: 10px; bottom: 64px; }
+  .stat .value { font-size: 1.5rem; }
+  .term-body { font-size: .8rem; }
+  .search { max-width: 100%; }
+}
+@media print {
+  .site-header, .site-footer, .mentor-fab, .mentor-panel, .toast-wrap { display: none !important; }
+  body { background: #fff; color: #000; }
+}
